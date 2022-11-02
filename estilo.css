@@ -1,0 +1,130 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    font-family: Candara;
+    background-color: white;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: #F7DC6F;
+}
+.ham{
+
+    display: none;
+    cursor: pointer;
+    border:none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span{
+    display: block;
+    background-color: #f3f3f3;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+
+}
+
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.3s;
+
+}
+
+.enlaces-menu li a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #f3f3f3;
+    font-weight: 600;
+
+}
+
+
+
+.enlaces-menu li:hover{
+    background-color: rgb(62, 130, 197);
+
+}
+
+
+/*DISPOSITIVOS MOVILES*/
+@media (max-width: 768px){
+    body{
+        overflow: hidden;
+    }
+
+    .ham{
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 23px;
+    }
+
+    nav{
+
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 0;
+
+    }
+
+    .enlaces-menu{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 92vh;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+
+    }
+
+    .enlaces-menu li{
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+
+    }
+
+}
+
+
+.enlaces-menu.activado{
+    display: flex;
+
+}
+
+
+#general{
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
+    height: 1000px;
+}
